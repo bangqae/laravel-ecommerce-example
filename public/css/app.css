@@ -307,7 +307,7 @@ header .top-nav ul a:hover {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   margin: 60px 0 60px;
-  grid-template-areas: "blog1 blog2 blog3";
+  grid-template-areas: "blog2 blog1 blog3";
 }
 
 .blog-section .blog-posts #blog1 {

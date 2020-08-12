@@ -15,6 +15,9 @@
     {{-- Styles --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+
+    {{-- Icons --}}
+    <link rel="icon" type="image/png" sizes="96x96" href="{{asset('img/favicon.png')}}">
 </head>
 
 <body>
@@ -139,27 +142,21 @@
                     <a href="#">
                         <h2 class="blog-title">Blog Post Title 1</h2>
                     </a>
-                    <div class="blog-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-                        reprehenderit quibusdam pariatur fugiat dolor voluptas ex ratione mollitia veritatis! Cupiditate
-                        esse aliquid velit quibusdam eaque illo veritatis sint corporis nulla!</div>
+                    <div class="blog-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
                 </div>
                 <div class="blog-post" id="blog2">
                     <a href="#"><img src="img/blog1.jpg" alt="blog image"></a>
                     <a href="#">
-                        <h2 class="blog-title">Blog Post Title 1</h2>
+                        <h2 class="blog-title">Blog Post Title 2</h2>
                     </a>
-                    <div class="blog-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-                        reprehenderit quibusdam pariatur fugiat dolor voluptas ex ratione mollitia veritatis! Cupiditate
-                        esse aliquid velit quibusdam eaque illo veritatis sint corporis nulla!</div>
+                    <div class="blog-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
                 </div>
                 <div class="blog-post" id="blog3">
                     <a href="#"><img src="img/blog1.jpg" alt="blog image"></a>
                     <a href="#">
-                        <h2 class="blog-title">Blog Post Title 1</h2>
+                        <h2 class="blog-title">Blog Post Title 3</h2>
                     </a>
-                    <div class="blog-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
-                        reprehenderit quibusdam pariatur fugiat dolor voluptas ex ratione mollitia veritatis! Cupiditate
-                        esse aliquid velit quibusdam eaque illo veritatis sint corporis nulla!</div>
+                    <div class="blog-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</div>
                 </div>
             </div> {{-- end blog posts --}}
         </div> {{-- end container --}}
@@ -167,13 +164,13 @@
 
     <footer>
         <div class="footer-content container">
-            <div class="made-with">Made with <i class="fa fa-heart"> by Me</i></div>
-            <ul class="">
+            <div class="made-with">Made with <i class="fa fa-heart"></i> by Me</div>
+            <ul>
                 <li>Follow Me:</li>
-                <li><a href="#" class="fa fa-globe"></a></li>
-                <li><a href="#" class="fa fa-youtube"></a></li>
-                <li><a href="#" class="fa fa-github"></a></li>
-                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#"><i class="fa fa-globe"></i></a></li>
+                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             </ul>
         </div> {{-- end footer-content --}}
     </footer>
