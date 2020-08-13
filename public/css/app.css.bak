@@ -1,3 +1,53 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: #212121;
+}
+
+a:visited {
+  color: #212121;
+}
+
+a:hover {
+  color: #878787;
+}
+
+.logo a {
+  color: #e9e9e9;
+}
+
+h1 {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.container {
+  margin: auto;
+  max-width: 1200px;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -135,56 +185,6 @@ table {
   border-spacing: 0;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-a {
-  text-decoration: none;
-  color: #212121;
-}
-
-a:visited {
-  color: #212121;
-}
-
-a:hover {
-  color: #878787;
-}
-
-.logo a {
-  color: #e9e9e9;
-}
-
-h1 {
-  margin-bottom: 40px;
-}
-
-h2 {
-  margin-bottom: 10px;
-}
-
-img {
-  max-width: 100%;
-}
-
-.clearfix::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-
-.container {
-  margin: auto;
-  max-width: 1200px;
-}
-
 body {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 18px;
@@ -314,65 +314,8 @@ h2 {
   margin-bottom: 20px;
 }
 
-.might-like-section {
-  padding: 40px 0 70px;
-  background: #F5F5F5;
-}
-
-.might-like-section h2 {
-  padding-bottom: 30px;
-}
-
-.might-like-section .might-like-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
-}
-
-.might-like-section .might-like-product {
-  border: 1px solid #979797;
-  background: white;
-  padding: 30px 0 20px;
-  text-align: center;
-}
-
-.might-like-section .might-like-product img {
-  width: 70%;
-}
-
-.might-like-section .might-like-product-price {
-  color: #919191;
-}
-
-form .half-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 30px;
-}
-
-form button[type=submit] {
-  border-style: none;
-  cursor: pointer;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.form-group {
-  margin-bottom: 20px;
-}
-
-.form-group label {
-  display: block;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-}
-
 header.with-background {
-  background: url("/img/dark-bg2.jpg");
+  background: url("/img/triangles.svg");
   background-size: cover;
   color: #e9e9e9;
 }
@@ -555,7 +498,7 @@ footer {
 .products-section .products {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 60px 30px;
+  grid-gap: 30px;
 }
 
 .products-section .products .product-price {

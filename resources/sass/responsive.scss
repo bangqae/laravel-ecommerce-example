@@ -1,16 +1,14 @@
-/*==========  Twitter Bootstrap’s Media Queries  ==========*/
-/*==========  Non-Mobile First Method  ==========*/
-
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
     .container {
         max-width: 960px;
     }
+
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-    header {
+    header.with-background, header {
         .top-nav {
             flex-direction: column;
 
@@ -19,49 +17,46 @@
             }
 
             ul {
-                margin: 20px auto 0; // top 20, right & left auto, bottom 0
+                margin: 20px auto 0;
                 width: 80%;
             }
-
         }
-
         .hero {
             grid-template-columns: 1fr;
             text-align: center;
 
             .hero-image {
-                padding-left: 0;
-                margin-top: 48px;
+              padding-left: 0;
+              margin-top: 40px;
             }
         }
     }
 
     .featured-section {
-        padding: 50px 0; // top & bottom 50, right & left 0
+        padding: 50px 0;
 
-        .products {
-            grid-template-columns: 1fr; // stacked in 1 rows with 1 fraction each column
+    .products {
+        grid-template-columns: 1fr;
         }
-
     }
 
     .blog-section {
-        .blog-posts {
-            grid-template-columns: 1fr;
-            text-align: center;
+      .blog-posts {
+        grid-template-columns: 1fr;
+        text-align: center;
+        grid-template-areas:
+            "blog3"
+            "blog2"
+            "blog1";
 
-            grid-template-areas: // how blog-posts look like
-                "blog1"
-                "blog2"
-                "blog3";
-
-            img {
-                padding: 0 40px;
-            }
+        .blog-post {
+            margin-top: 30px;
         }
+
+      }
     }
 
-    footer .footer-content {
+    .footer-content {
         flex-direction: column;
 
         .made-with {
@@ -73,13 +68,96 @@
             width: 60%;
         }
     }
+
+    .breadcrumbs {
+        text-align: center;
+    }
+
+    .products-section {
+        grid-template-columns: 1fr;
+
+        .sidebar {
+            text-align: center;
+        }
+
+        .products {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .product-section {
+        grid-template-columns: 1fr;
+    }
+
+    .might-like-section .might-like-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-section {
+
+        grid-template-columns: 1fr;
+
+        .cart-buttons {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cart-table-row {
+
+            .cart-table-row-left {
+                width: 30%;
+            }
+
+            .cart-table-row-right {
+                width: 55%;
+            }
+
+            img {
+                display: none;
+            }
+
+        }
+
+        .have-code-container {
+            width: 100%;
+        }
+
+        .cart-totals {
+            flex-direction: column;
+
+            .cart-totals-left {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .cart-totals-right {
+                width: 100%;
+            }
+        }
+
+    }
+
+
+    .checkout-section {
+        grid-template-columns: 1fr;
+
+        .checkout-table-container {
+            margin-left: 10px;
+        }
+    }
 }
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {}
+@media only screen and (max-width : 768px) {
+
+}
 
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {}
+@media only screen and (max-width : 480px) {
+
+}
 
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px) {}
+@media only screen and (max-width : 320px) {
+
+}
