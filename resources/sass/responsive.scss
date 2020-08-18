@@ -8,7 +8,9 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-    header.with-background, header {
+
+    header.with-background,
+    header {
         .top-nav {
             flex-direction: column;
 
@@ -21,39 +23,40 @@
                 width: 80%;
             }
         }
+
         .hero {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr; // stacked in 1 rows with 1 fraction each column
             text-align: center;
 
             .hero-image {
-              padding-left: 0;
-              margin-top: 40px;
+                padding-left: 0;
+                margin-top: 40px;
             }
         }
     }
 
     .featured-section {
-        padding: 50px 0;
+        padding: 50px 0; // top & bottom 50, right & left 0
 
-    .products {
-        grid-template-columns: 1fr;
+        .products {
+            grid-template-columns: 1fr; // stacked in 1 rows with 1 fraction each column
         }
     }
 
     .blog-section {
-      .blog-posts {
-        grid-template-columns: 1fr;
-        text-align: center;
-        grid-template-areas:
-            "blog3"
-            "blog2"
-            "blog1";
+        .blog-posts {
+            grid-template-columns: 1fr; // stacked in 1 rows with 1 fraction each column
+            text-align: center;
+            grid-template-areas:
+                "blog3"
+                "blog2"
+                "blog1";
 
-        .blog-post {
-            margin-top: 30px;
+            .blog-post {
+                margin-top: 30px;
+            }
+
         }
-
-      }
     }
 
     .footer-content {
@@ -74,23 +77,24 @@
     }
 
     .products-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; // stacked in 1 rows with 1 fraction each column
 
         .sidebar {
             text-align: center;
         }
 
         .products {
-            grid-template-columns: 1fr;
+            /* origin is 1fr not 1fr 1fr */
+            grid-template-columns: 1fr 1fr; // stacked in 1 rows with 2 fraction each column
         }
     }
 
     .product-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; // stacked in 1 rows with 1 fraction each column
     }
 
     .might-like-section .might-like-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; // stacked in 1 rows with 1 fraction each column
     }
 
     .cart-section {
@@ -100,16 +104,34 @@
         .cart-buttons {
             flex-direction: column;
             text-align: center;
+            /* I'm adding this */
+            margin: 5px;
+
+            .button {
+                /* I'm adding this */
+                margin-bottom: 5px;
+
+            }
         }
 
         .cart-table-row {
-
             .cart-table-row-left {
                 width: 30%;
+
+                .cart-item-details {
+                    .cart-table-item {
+                        /* I'm adding this */
+                        white-space: nowrap;
+                        width: 190px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
             }
 
             .cart-table-row-right {
-                width: 55%;
+                /* origin is 55% */
+                width: 65%;
             }
 
             img {
@@ -139,7 +161,7 @@
 
 
     .checkout-section {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; // stacked in 1 rows with 1 fraction each column
 
         .checkout-table-container {
             margin-left: 10px;
@@ -149,15 +171,47 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
+    header {
+        .hero {
+            .button {
+                /* I'm adding this */
+                margin-right: 10px !important;
+                margin-left: 10px;
+            }
+        }
+    }
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+    .cart-section {
+        .cart-table-row {
+            .cart-table-row-left {
+                .cart-item-details {
+                    .cart-table-item {
+                        /* I'm adding this */
+                        white-space: nowrap;
+                        width: 100px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
 
+    header.with-background,
+    header {
+        .hero {
+            .button {
+                /* I'm adding this */
+                margin-right: auto !important;
+                margin-left: auto;
+            }
+        }
+    }
 }

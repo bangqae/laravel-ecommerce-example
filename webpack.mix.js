@@ -11,8 +11,12 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
+mix.disableSuccessNotifications()
+    .js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/responsive.scss', 'public/css')
+    .options({
+        processCssUrls: false
+    })
     .sourceMaps()
     .browserSync('http://localhost:8000/');

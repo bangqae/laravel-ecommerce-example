@@ -14,7 +14,7 @@
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
         <a href="{{ route('shop.index') }}">Shop</a>
         <i class="fa fa-chevron-right breadcrumb-separator"></i>
-        <span>Macbook Pro</span>
+        <span>{{ $product->name }}</span>
     </div>
 </div> <!-- end breadcrumbs -->
 
@@ -33,7 +33,14 @@
 
         <p>&nbsp;</p>
 
-        <a href="#" class="button">Add to Cart</a>
+        {{-- <a href="#" class="button">Add to Cart</a> --}}
+        <form action="{{ route('cart.store') }}" method="POST">
+            @csrf
+            <input type="hidden" name="id" value="{{ $product->id }}">
+            <input type="hidden" name="name" value="{{ $product->name }}">
+            <input type="hidden" name="price" value="{{ $product->price }}">
+            <button type="submit" class="button button-plain">Add to Cart</button>
+        </form>
     </div>
 </div> <!-- end product-section -->
 
